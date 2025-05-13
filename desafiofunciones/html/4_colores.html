@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Colores por Tecla y Clic</title>
+</head>
+<body>
+
+  <h1>Presiona una tecla o haz clic para cambiar el color</h1>
+
+  <div id="key" style="width: 200px; height: 200px; background-color: white; border: 1px solid black;"></div>
+
+  <script>
+    let color = ""; // Variable global para almacenar el color
+
+    // Cambiar color al hacer clic
+    document.getElementById("key").addEventListener("click", function() {
+      color = 'pink';  // Cambia a rosa al hacer clic
+      document.getElementById("key").style.backgroundColor = color;
+    });
+
+    // Cambiar color al pasar el cursor
+    document.getElementById("key").addEventListener("mouseover", function() {
+      color = 'cyan';  // Cambia a cian al pasar el cursor
+      document.getElementById("key").style.backgroundColor = color;
+    });
+
+    // Cambiar color con teclas presionadas
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'a') {
+        color = 'pink';
+      } else if (event.key === 's') {
+        color = 'orange';
+      } else if (event.key === 'd') {
+        color = 'cyan';
+      } else if (event.key === 'q') {
+        color = 'purple';
+      } else if (event.key === 'w') {
+        color = 'gray';
+      } else if (event.key === 'e') {
+        color = 'brown';
+      }
+      document.getElementById("key").style.backgroundColor = color;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <a href="pintar.html">Ir a la página de pintar</a>
+    <a href="4_colores.html">Ir a la página de colores</a>
+
+</head>
+<body>
+    
+</body>
+</html>
+<div id="key" style="width: 200px; height: 200px; background-color: white; border: 1px solid black;"></div>
+
+<script>
+  let color = ""; // Variable global para almacenar el color
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'a') {
+      color = 'pink';
+    } else if (event.key === 's') {
+      color = 'orange';
+    } else if (event.key === 'd') {
+      color = 'cyan';
+    } else if (event.key === 'q') {
+      color = 'purple';
+    } else if (event.key === 'w') {
+      color = 'gray';
+    } else if (event.key === 'e') {
+      color = 'brown';
+    }
+    
+    document.getElementById("key").style.backgroundColor = color;
+  });
+</script>
